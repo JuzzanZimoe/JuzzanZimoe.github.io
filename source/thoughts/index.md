@@ -21,6 +21,7 @@ aside: false
 <section id="overview" class="active">
 <h2>总述</h2>
 <p>这是总述，测试更新使用。</p>
+<p>测试 Cloudflare Pages 部署。</p>
 </section>
 <section id="notes">
 <h2>Notes</h2>
