@@ -2,6 +2,7 @@
 title: Projects
 date: 2026-07-29 00:00:00
 aside: false
+indexing: false
 ---
 <!-- markdownlint-disable MD033 -->
 <div class="knowledge-page">

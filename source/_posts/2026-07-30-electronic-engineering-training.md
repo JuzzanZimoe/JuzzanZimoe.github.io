@@ -1,5 +1,6 @@
 ---
 title: 电子工程训练
+published: false
 date: 2026-07-30 09:05:00
 updated: 2026-07-30 09:05:00
 link: /projects/#electronic-engineering-training

@@ -1,5 +1,6 @@
 ---
 title: 信息与电子工程导论
+published: false
 date: 2026-07-29 22:25:00
 updated: 2026-07-29 22:25:00
 link: /courses/#isee-introduction

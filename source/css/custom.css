@@ -336,6 +336,171 @@
   box-shadow: var(--card-box-shadow);
 }
 
+/* ============ 页面密码锁 ============ */
+/* 加锁页面在脚本执行前先隐藏内容，防止内容闪现 */
+html.page-lock-pending #content-inner {
+  visibility: hidden;
+}
+
+.page-lock-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+}
+
+.page-lock-mask.show {
+  display: flex;
+}
+
+body.page-locked {
+  overflow: hidden;
+}
+
+.page-lock-box {
+  width: min(90vw, 340px);
+  padding: 36px 28px 28px;
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.22);
+  border-radius: 12px;
+  background: var(--card-bg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.page-lock-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.page-lock-title {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  color: var(--font-color);
+}
+
+.page-lock-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: var(--font-color);
+  font-size: 1rem;
+}
+
+.page-lock-input:focus {
+  border-color: #49b1f5;
+}
+
+.page-lock-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #49b1f5;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.page-lock-btn:hover {
+  opacity: 0.9;
+}
+
+.page-lock-err {
+  min-height: 20px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #f47466;
+}
+
+.page-lock-mask.error .page-lock-box {
+  animation: pageLockShake 0.4s ease;
+}
+
+@keyframes pageLockShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}
+
+/* ============ 朝花夕拾：音频列表 ============ */
+.music-list {
+  list-style: none;
+  margin: 8px 0 24px;
+  padding: 0;
+}
+
+.music-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.music-date {
+  flex: 0 0 70px;
+  font-size: 0.95rem;
+  color: var(--font-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.music-name {
+  flex: 0 1 auto;
+  font-size: 0.95rem;
+  color: var(--font-color);
+}
+
+/* 播放键：复刻 Chrome 原生音频播放键（浅灰三角 / 暂停竖线） */
+.music-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #a8a9aa;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.music-play:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.music-play svg {
+  display: block;
+}
+
+.music-play .music-icon-pause {
+  display: none;
+}
+
+.music-play.playing .music-icon-play {
+  display: none;
+}
+
+.music-play.playing .music-icon-pause {
+  display: block;
+}
+
 /* Home 文章卡片元信息：日期一行，分类一行，隐藏标签 */
 #recent-posts .article-meta-wrap {
   display: flex;

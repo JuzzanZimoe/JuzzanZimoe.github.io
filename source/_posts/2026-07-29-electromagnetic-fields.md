@@ -1,5 +1,6 @@
 ---
 title: 电磁场与电磁波
+published: false
 date: 2026-07-29 21:54:00
 updated: 2026-07-29 21:54:00
 link: /courses/#electromagnetic-fields

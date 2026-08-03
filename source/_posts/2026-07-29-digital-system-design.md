@@ -1,5 +1,6 @@
 ---
 title: 数字电子技术
+published: false
 date: 2026-07-29 21:33:00
 updated: 2026-07-29 21:33:00
 link: /courses/#digital-system-design
