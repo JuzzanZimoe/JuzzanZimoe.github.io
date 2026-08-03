@@ -1,0 +1,473 @@
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/* 一级菜单居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* 背景宇宙星光 */
+#universe{
+  display: block !important;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#body-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+#footer-runtime {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.footer-runtime-separator {
+  margin: 0 6px;
+}
+
+@media screen and (max-width: 768px) {
+  #footer-runtime {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .footer-runtime-separator {
+    display: none;
+  }
+}
+
+/* 栏目目录页 */
+.knowledge-page {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+#content-inner.layout.hide-aside {
+  width: min(92vw, 1240px);     /* 宽度修改 */
+  max-width: 1240px;
+}
+
+#content-inner.hide-aside #page {
+  width: 100%;
+  max-width: none;
+}
+
+#content-inner.hide-aside #page .container {
+  padding: 42px 48px;
+}
+
+.knowledge-sidebar {
+  position: sticky;
+  top: 88px;
+  max-height: calc(100vh - 120px);
+  overflow: auto;
+  padding-right: 12px;
+  border-right: 1px solid rgba(128, 128, 128, 0.18);
+}
+
+.knowledge-sidebar-title {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.knowledge-tree,
+.knowledge-tree ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.knowledge-tree li {
+  margin: 8px 0;
+}
+
+.knowledge-tree a,
+.knowledge-tree summary {
+  color: var(--font-color);
+  cursor: pointer;
+  line-height: 1.7;
+}
+
+.knowledge-tree > li > a,
+.knowledge-tree summary {
+  font-weight: 700;
+}
+
+.knowledge-tree a:hover,
+.knowledge-tree summary:hover {
+  color: var(--theme-color);
+}
+
+.knowledge-tree a.active {
+  color: var(--theme-color);
+  font-weight: 700;
+}
+
+.knowledge-tree ul {
+  margin-top: 6px;
+  padding-left: 18px;
+}
+
+.knowledge-content {
+  min-width: 0;
+}
+
+.knowledge-section-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: -4px 0 28px;
+  color: #9a9a9a;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.knowledge-section-meta i {
+  margin-right: 6px;
+  color: #7890a0;
+}
+
+.knowledge-section-meta .knowledge-meta-separator {
+  color: #c0c0c0;
+}
+
+.knowledge-content > section {
+  display: none !important;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  scroll-margin-top: 96px;
+}
+
+.knowledge-content > section.active {
+  display: block !important;
+}
+
+.knowledge-content > section:not(.active) {
+  display: none !important;
+}
+
+.knowledge-content > section:target {
+  animation: knowledgeTarget 1.2s ease;
+}
+
+.knowledge-content .resource-list {
+  padding-left: 1.1rem;
+}
+
+.knowledge-content .inline-resource-list a {
+  color: inherit;
+  border-bottom: 1px dashed rgba(128, 128, 128, 0.45);
+}
+
+.knowledge-content .pdf-preview {
+  width: 100%;
+  height: clamp(980px, 120vh, 1280px);
+  margin-top: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.22);
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.06);
+}
+
+#article-container .knowledge-content pre.code-sample {
+  overflow-x: auto;
+  margin: 16px 0 28px;
+  padding: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.22);
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.06);
+  color: var(--font-color);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+#article-container .knowledge-content pre.code-sample code {
+  display: block;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  white-space: pre;
+}
+
+/* Projects 页表格表头不折行，避免“顺序”被拆成两行 */
+#article-container .knowledge-content table th {
+  white-space: nowrap;
+}
+
+/* Projects 页普通代码块与 code-sample 保持一致的浅灰底 */
+#article-container .knowledge-content pre,
+#article-container .knowledge-content figure.highlight {
+  border: 1px solid rgba(128, 128, 128, 0.22);
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.06);
+  color: var(--font-color);
+}
+
+#article-container .knowledge-content pre code,
+#article-container .knowledge-content figure.highlight code {
+  background: transparent;
+  color: inherit;
+  text-shadow: none;
+}
+
+.about-page {
+  max-width: 860px;
+  margin: 0 0 0 79px;
+}
+
+.about-card {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  padding: 24px 0;
+}
+
+#article-container .about-avatar {
+  display: block;
+  width: 315px;
+  height: 315px;
+  margin: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.about-body h2 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+  font-family: "Commercial Script BT", "CommercialScript BT", "Palace Script MT",
+    "French Script MT", "Segoe Script", cursive, serif;
+}
+
+.about-body {
+  min-width: 0;
+  text-align: left;
+}
+
+.about-quote {
+  margin: 0 0 22px;
+}
+
+.about-quote-cn {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--font-color);
+  font-family: "STXingkai", "华文行楷", "KaiTi", "楷体",
+    "LXGW WenKai Screen", "霞鹜文楷", "Noto Serif SC", "Source Han Serif SC",
+    "Songti SC", "SimSun", "Microsoft YaHei", serif;
+}
+
+.about-quote-en {
+  display: inline-block;
+  margin-top: 2px;
+  font-family: "Commercial Script BT", "CommercialScript BT", "Palace Script MT",
+    "French Script MT", "Segoe Script", "Vivaldi", cursive, serif;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  color: rgba(128, 128, 128, 0.85);
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border: 1px solid rgba(128, 128, 128, 0.28);
+  border-radius: 999px;
+  color: var(--font-color);
+}
+
+.about-links a:hover {
+  color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+
+/* 分页省略号与其他翻页按钮一致，显示白底方块 */
+#pagination .pagination > .space {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--card-box-shadow);
+}
+
+/* Home 文章卡片元信息：日期一行，分类一行，隐藏标签 */
+#recent-posts .article-meta-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 6px;
+  align-items: center;
+}
+
+#recent-posts .article-meta-wrap > .post-meta-date {
+  flex: 0 0 100%;
+}
+
+#recent-posts .article-meta-wrap > .article-meta {
+  flex: 0 0 100%;
+}
+
+#recent-posts .article-meta-wrap > .article-meta.tags {
+  display: none;
+}
+
+#recent-posts .article-meta-wrap > .article-meta:first-of-type .article-meta-separator:first-child {
+  display: none;
+}
+
+@keyframes knowledgeTarget {
+  from {
+    background: rgba(73, 177, 245, 0.14);
+  }
+  to {
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .knowledge-page {
+    display: block;
+  }
+
+  .knowledge-sidebar {
+    position: static;
+    max-height: none;
+    margin-bottom: 28px;
+    padding-right: 0;
+    padding-bottom: 18px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+  }
+
+  #content-inner.hide-aside #page .container {
+    padding: 28px 20px;
+  }
+
+  .knowledge-content .pdf-preview {
+    height: 78vh;
+  }
+
+  .about-page {
+    margin-left: -50px;
+  }
+
+  .about-card {
+    display: block;
+    text-align: center;
+    padding: 24px 8px;
+  }
+
+  .about-avatar {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 18px;
+  }
+
+  .about-links {
+    justify-content: center;
+  }
+}
+
+/* ============ Moments 侧边日期：未选中浅色、选中变深 ============ */
+.moments-knowledge .knowledge-tree a {
+  color: #9aa1a8;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.moments-knowledge .knowledge-tree a:hover {
+  color: #6b7280;
+}
+
+.moments-knowledge .knowledge-tree a.active {
+  color: var(--font-color);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .moments-knowledge .knowledge-tree a.active {
+  color: #49b1f5;
+}
+
+/* Moments 顶部标题：字体放大且恒为黑色 */
+.moments-knowledge .knowledge-tree > li:first-child > a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000 !important;
+}
+
+/* Moments 日期前面的蓝色小圆（与 projects/courses 目录一致，顶部标题不带圆点）。
+   顶层 ul 默认 padding-left:0，marker 会被 .knowledge-sidebar 的
+   overflow:auto 裁掉，需要留出内边距让圆点可见。 */
+.moments-knowledge .knowledge-tree {
+  padding-left: 18px;
+}
+
+.moments-knowledge .knowledge-tree > li:not(:first-child) {
+  list-style-type: circle;
+}
+
+.moments-knowledge .knowledge-tree > li:not(:first-child)::marker {
+  color: #49b1f5;
+}
+
+.moments-knowledge .knowledge-tree > li:first-child {
+  list-style-type: none;
+}
+
+/* 重逢倒计时 */
+.reunion-countdown {
+  margin: 8px 0 20px;
+  font-size: 1.15rem;
+  color: var(--font-color);
+}
+
+/* moments 页面内容太短时页面滚不动，导致点击日期无法“跳到顶部”。
+   给内容列一个最小高度，保证滚动范围与 projects/courses 一致 */
+.moments-knowledge .knowledge-content {
+  min-height: calc(100vh - 240px);
+}
