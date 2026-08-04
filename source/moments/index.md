@@ -38,6 +38,8 @@ indexing: false
 <h3>大鱼</h3>
 <img src="/moments/resources/大鱼/1.jpg">
 <ul class="music-list">
+<li><span class="music-date">08月04日</span><span class="music-name">大鱼.mp3</span><button class="music-play" type="button" data-src="/moments/resources/大鱼/0804大鱼1.mp3"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11" aria-hidden="true"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"/></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11" aria-hidden="true"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"/><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"/></svg></button></li>
+<li><span class="music-date">08月04日</span><span class="music-name">大鱼.mp3</span><button class="music-play" type="button" data-src="/moments/resources/大鱼/0804大鱼2.mp3"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11" aria-hidden="true"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"/></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11" aria-hidden="true"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"/><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"/></svg></button></li>
 <li><span class="music-date">08月03日</span><span class="music-name">大鱼.mp3</span><button class="music-play" type="button" data-src="/moments/resources/大鱼/0803大鱼.mp3"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11" aria-hidden="true"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"/></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11" aria-hidden="true"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"/><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"/></svg></button></li>
 </ul>
 <h3>兰亭序</h3>
