@@ -30,6 +30,11 @@ indexing: false
 </section>
 <section id="2026.07.14">
 <h2>朝花夕拾</h2>
+<h3>鸟之诗</h3>
+<img src="/moments/resources/鸟之诗/1.jpg">
+<ul class="music-list">
+<li><span class="music-date">08月04日</span><span class="music-name">鸟之诗.mp3</span><button class="music-play" type="button" data-src="/moments/resources/鸟之诗/0804鸟之诗.mp3"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11" aria-hidden="true"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"/></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11" aria-hidden="true"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"/><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"/></svg></button></li>
+</ul>
 <h3>大鱼</h3>
 <img src="/moments/resources/大鱼/1.jpg">
 <ul class="music-list">
@@ -74,7 +79,7 @@ indexing: false
 <li><span class="music-date">07月13日</span><span class="music-name">蒲公英的约定.mp3</span><button class="music-play" type="button" data-src="/moments/resources/蒲公英的约定/0713蒲公英的约定.mp3"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11" aria-hidden="true"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"/></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11" aria-hidden="true"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"/><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"/></svg></button></li>
 </ul>
 <h3>诀别书</h3>
-<img src="/moments/resources/诀别书/1.jpg">
+<img src="/moments/resources/诀别书/2.jpg">
 <ul class="music-list">
 <li><span class="music-date">07月14日</span><span class="music-name">诀别书.mp3</span><button class="music-play" type="button" data-src="/moments/resources/诀别书/0714诀别书.mp3"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11" aria-hidden="true"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"/></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11" aria-hidden="true"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"/><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"/></svg></button></li>
 </ul>
