@@ -501,6 +501,14 @@ body.page-locked {
   display: block;
 }
 
+/* 朝花夕拾：乐曲配图缩小到 3/5（60%），高度等比，靠左显示 */
+section[id="2026.07.14"] img {
+  display: block;
+  max-width: 60%;
+  height: auto;
+  margin: 0 0 20px;
+}
+
 /* Home 文章卡片元信息：日期一行，分类一行，隐藏标签 */
 #recent-posts .article-meta-wrap {
   display: flex;
