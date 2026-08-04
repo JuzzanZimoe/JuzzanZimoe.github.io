@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: JuzzanZimoe's Blog
+title: Lingering Serendipity
 subtitle: ''
 description: '这个人很懒，但还是写了点东西。'
 keywords:
@@ -61,7 +61,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 5
+  per_page: 6
   order_by: -date
 
 # Category & Tag
