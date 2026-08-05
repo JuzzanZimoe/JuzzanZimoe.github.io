@@ -501,6 +501,15 @@ body.page-locked {
   display: block;
 }
 
+/* 播放时间显示：00:00/01:25 */
+.music-time {
+  flex-shrink: 0;
+  min-width: 88px;
+  font-size: 0.85rem;
+  color: #a8a9aa;
+  font-variant-numeric: tabular-nums;
+}
+
 /* 朝花夕拾：乐曲配图缩小到 3/5（60%），高度等比，靠左显示 */
 section[id="2026.07.14"] img {
   display: block;

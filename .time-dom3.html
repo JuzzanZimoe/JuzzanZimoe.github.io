@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light"><head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="file:///D:/Hexo-Blog/blog-demo/public/css/custom.css">
+</head>
+<body>
+<ul class="music-list">
+<li><span class="music-date">07月20日</span><span class="music-name">三叶的主题曲.mp3</span><button class="music-play" type="button" data-src="/moments/resources/三叶的主题曲/0720三叶主题曲.mp3" data-bound="1"><svg class="music-icon-play" viewBox="0 0 9 11" width="9" height="11"><path d="M0 0 9 5.5 0 11Z" fill="currentColor"></path></svg><svg class="music-icon-pause" viewBox="0 0 12 11" width="12" height="11"><rect x="1" y="0" width="3.4" height="11" fill="currentColor"></rect><rect x="7.6" y="0" width="3.4" height="11" fill="currentColor"></rect></svg></button><span class="music-time">02:30/03:41</span></li>
+</ul>
+<pre id="result">init=00:00/03:41
+afterTimeupdate=00:37/03:41
+afterSeek=02:30/03:41</pre>
+<script defer="" src="file:///D:/Hexo-Blog/blog-demo/public/js/music-player.js"></script>
+<script>
+window.addEventListener('load', function () {
+  var btn = document.querySelector('.music-play');
+  var time = document.querySelector('.music-time');
+  var out = [];
+  out.push('init=' + time.textContent);
+  btn.click();
+  setTimeout(function () {
+    btn._audio.currentTime = 37.5;
+    btn._audio.dispatchEvent(new Event('timeupdate'));
+    out.push('afterTimeupdate=' + time.textContent);
+    btn._audio.currentTime = 150;
+    btn._audio.dispatchEvent(new Event('timeupdate'));
+    out.push('afterSeek=' + time.textContent);
+    document.getElementById('result').textContent = out.join('\n');
+  }, 400);
+});
+</script>
+
+
+</body></html>
